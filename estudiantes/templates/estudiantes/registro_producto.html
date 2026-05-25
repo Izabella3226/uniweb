@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Registrar producto</title>
+</head>
+<body>
+<h1>Registrar producto</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+    </div>
+
+    <div>
+        <label>Precio:</label>
+        <input type="number" name="precio" step="0.01" required>
+    </div>
+    <br>
+    <button type="submit">Guardar</button>
+</form>
+<br>
+<a href="/productos/">Ver lista de productos</a>
+</body>
+</html>

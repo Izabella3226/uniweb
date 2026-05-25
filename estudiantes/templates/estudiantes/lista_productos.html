@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lista de productos</title>
+    </head>
+    <body>
+        <h1>Lista de Productos</h1>
+
+        {% if productos %}
+        <ul>
+            {% for producto in productos %}
+            <li>
+                {{producto.nombre}} - ${{producto.precio}}
+
+                <a href="/productos/editar/{{ producto.id}}">
+                    editar
+                </a>
+                <a href="/productos/eliminar/{{ producto.id}}">
+                    eliminar
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No hay productos registrados</p>
+        {% endif %}
+
+        <br>
+        <a href="/productos/registro/">Registrar nuevo producto</a>
+    </body>
+</html>

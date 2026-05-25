@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lista de estudiantes</title>
+</head>
+<body>
+<h1>Lista de estudiantes</h1>
+
+{% if estudiantes %}
+<ul>
+{% for estudiante in estudiantes %}
+<li>{{ estudiante.nombre }} - {{ estudiante.edad }} años</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No hay estudiantes registrados.</p>
+{% endif %}
+
+<br>
+<a href="/estudiantes/registro/">Registrar nuevo estudiante</a>
+</body>
+</html>

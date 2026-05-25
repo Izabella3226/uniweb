@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{{ titulo }}</title>
+</head>
+
+<body>
+
+<h1>{{ titulo }}</h1>
+<p>Renderizado desde Django Template.</p>
+
+<button id="btn">Click JS</button>
+<p id="out"></p>
+
+<button id="sobre">Sobre Nosotros</button>
+<p id="sobre_nosotros"></p>
+
+<button id="ubicacion">Estamos Ubicados</button>
+<p id="ubi"></p>
+
+
+<form id="registro">
+<script>
+document.getElementById("btn").addEventListener("click", () => {
+document.getElementById("out").innerText = "Interacción desde JavaScript";
+});
+document.getElementById("sobre").addEventListener("click", () => {
+document.getElementById("sobre_nosotros").innerText = "Somos estudiantes de ingenieria de software de la uniminuto";
+})
+document.getElementById("ubicacion").addEventListener("click", () => {
+document.getElementById("ubi").innerText = "Ubicados en Bello antioquia";
+})
+</script>
+
+</body>
+</html>
